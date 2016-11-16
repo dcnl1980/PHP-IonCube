@@ -39,8 +39,8 @@ RUN mkdir ~/.dev-alias \
     && mv ~/.dev-alias/dev-alias-master/* ~/.dev-alias \
     && rm -rf ~/.dev-alias/dev-alias-master \
     && rm ~/.dev-alias/master.zip \
-    && echo "source ~/.dev-alias/alias.sh" >> ~/.bashrc
-    && source ~/.dev-alias/alias.sh
+    && echo "source ~/.dev-alias/alias.sh" >> ~/.bashrc \
+    && . ~/.dev-alias/alias.sh
 
 RUN usermod -u 1000 www-data    
 
